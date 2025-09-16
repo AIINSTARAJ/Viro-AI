@@ -1,0 +1,32 @@
+{
+    "manifest_version":3,
+    "name": "Viro",
+    "version": "1.0",
+
+    "description": "Intelligent Article Summarizer",
+    
+    "permissions": ["scripting", "activeTab","storage"],
+
+    "action": {
+        "default_popup": "Index/index.html",
+        "default_icon": {
+            "128": "Icon/viro.png"
+        }
+    },
+
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["Script/core.js"]
+        }
+    ],
+
+    "background": {
+        "service_worker": "Script/main.js"
+    },
+
+    "options_page": "Utils/options.html",
+
+    "host_permissions": ["<all_urls>"]
+}
