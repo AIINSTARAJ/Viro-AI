@@ -1,5 +1,3 @@
-
-
 document.getElementById("summarize").addEventListener("click", async () => {
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = '<div class="loading"><div class="loader"></div></div>';
